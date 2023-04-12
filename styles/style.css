@@ -136,3 +136,26 @@ body {
     display: none;
     margin-bottom: 10px;
 }
+
+#water-mark {
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    margin: 5px 10px;
+    background-color: bisque;
+    padding: 3px 10px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#water-mark a {
+    text-decoration: none;
+    color: black;
+}
+
+#water-mark:hover {
+    cursor: pointer;
+    background-color: rgb(255, 199, 131);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+}
