@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-board {
+    width: 304px;
+    height: 304px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid black;
+}
+
