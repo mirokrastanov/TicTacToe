@@ -1,6 +1,9 @@
 const gameBoard = document.querySelector('#game-board');
-const info = document.querySelector('#info');
+const infoDisplay = document.querySelector('#info');
 const emptyBoard = ('' + (", ''").repeat(8)).split(' ');
+
+let go = 'circle';
+infoDisplay.textContent = 'Circle goes first.';
 
 function createBoard() {
     emptyBoard.forEach((_, i) => {
@@ -17,6 +20,14 @@ createBoard();
 function addGo(e) {
     let cell = e.target;
     let goDisplay = document.createElement('div');
-    goDisplay.classList.add('cross');
+    goDisplay.classList.add(go);
     cell.appendChild(goDisplay);
+    go = go == 'circle' ? 'cross' : 'circle';
+    infoDisplay.textContent = `It is now ${go}'s go.`;
+    cell.removeEventListener('click', addGo);
+    checkScore();
+}
+
+function checkScore() {
+    
 }
