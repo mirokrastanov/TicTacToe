@@ -49,10 +49,12 @@ body {
     transform: rotate(45deg);
 }
 
-.cross::before, .cross::after {
+.cross::before,
+.cross::after {
     content: '';
     position: absolute;
     background-color: red;
+    border-radius: 10px;
 }
 
 .cross::before {
