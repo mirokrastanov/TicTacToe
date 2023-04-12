@@ -1,6 +1,8 @@
 import { render, html } from './node_modules/lit-html/lit-html.js';
 
 const gameBoard = document.querySelector('#game-board');
+const newGame = document.querySelector('#new-game');
+newGame.addEventListener('click', renderNewGame);
 const infoDisplay = document.querySelector('#info');
 const emptyBoard = ('' + (", ''").repeat(8)).split(' ');
 
@@ -50,8 +52,7 @@ function checkScore() {
         if (checker.cross.filter(x => x == true).length == 3) crossWins = true;
         if (circleWins || crossWins) {
             winner = circleWins ? 'Circle' : 'Cross';
-            // infoDisplay.textContent = `${winner} wins!`;
-            // allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
             renderWinnerView();
             return;
         }
@@ -59,12 +60,14 @@ function checkScore() {
 }
 
 function renderWinnerView() {
-    gameBoard.replaceChildren();
-    infoDisplay.textContent = '';
-    render(winView(), gameBoard);
+    infoDisplay.textContent = `${winner} wins!`;
+    newGame.style.display = 'flex';
 }
 
-const winView = () => html`
-    <div class="btn" id="winner">${winner} wins!</div>
-    <div class="btn" id="new-game">New Game</div>
-`;
+function renderNewGame() {
+    createBoard();
+    go = 'circle';
+    winner = '';
+    newGame.style.display = 'none';
+    infoDisplay.textContent = 'Circle goes first.';
+}
