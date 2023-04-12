@@ -1,8 +1,11 @@
+import { render, html } from './node_modules/lit-html/lit-html.js';
+
 const gameBoard = document.querySelector('#game-board');
 const infoDisplay = document.querySelector('#info');
 const emptyBoard = ('' + (", ''").repeat(8)).split(' ');
 
 let go = 'circle';
+let winner = '';
 infoDisplay.textContent = 'Circle goes first.';
 
 function createBoard() {
@@ -46,9 +49,22 @@ function checkScore() {
         if (checker.circle.filter(x => x == true).length == 3) circleWins = true;
         if (checker.cross.filter(x => x == true).length == 3) crossWins = true;
         if (circleWins || crossWins) {
-            infoDisplay.textContent = circleWins ? 'Circle Wins!' : 'Cross Wins!';
-            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+            winner = circleWins ? 'Circle' : 'Cross';
+            // infoDisplay.textContent = `${winner} wins!`;
+            // allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+            renderWinnerView();
             return;
         }
     });
 }
+
+function renderWinnerView() {
+    gameBoard.replaceChildren();
+    infoDisplay.textContent = '';
+    render(winView(), gameBoard);
+}
+
+const winView = () => html`
+    <div class="btn" id="winner">${winner} wins!</div>
+    <div class="btn" id="new-game">New Game</div>
+`;
