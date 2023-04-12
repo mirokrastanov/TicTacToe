@@ -17,6 +17,6 @@ createBoard();
 function addGo(e) {
     let cell = e.target;
     let goDisplay = document.createElement('div');
-    goDisplay.classList.add('circle');
+    goDisplay.classList.add('cross');
     cell.appendChild(goDisplay);
 }
