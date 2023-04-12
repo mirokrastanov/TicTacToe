@@ -7,7 +7,6 @@
 html {
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
 }
 
 body {
@@ -24,9 +23,12 @@ body {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-color: #7ebeff;
+    background-image: linear-gradient(62deg, #7ebeff 0%, #d8afff 100%);
     border-radius: 15px;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .square {
@@ -58,17 +60,14 @@ body {
 .square:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    transform: scale(0.9);
-    border-radius: 15px;
+    cursor: pointer;
 }
 
 .circle {
     height: 80px;
     width: 80px;
-    margin-left: 5px;
-    margin-top: 2px;
     border-radius: 50%;
-    border: 20px solid blue;
+    border: 20px solid #0CAFFF;
 }
 
 .cross {
@@ -82,7 +81,7 @@ body {
 .cross::after {
     content: '';
     position: absolute;
-    background-color: red;
+    background-color: #FF004F;
     border-radius: 10px;
 }
 
@@ -98,4 +97,8 @@ body {
     height: 30%;
     margin-top: -15%;
     width: 100%;
+}
+
+.btn {
+    background-color: #8EC5FC;
 }
