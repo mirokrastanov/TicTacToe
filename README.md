@@ -1,6 +1,11 @@
 # TicTacToe
 Web-based JavaScript implementation of the popular game Tic Tac Toe.
-<p align="center"><a href="https://tictactoe.mirokrastanov.repl.co/"><img src="https://raw.githubusercontent.com/mirokrastanov/Software-Engineering-SoftUni/main/miscellaneous/tictactoe-1.png" alt="game-image" height="400px"></a></p>
+<p align="center"><a href="https://app-library-13e36.web.app/apps/tic-tac-toe"><img src="https://raw.githubusercontent.com/mirokrastanov/Software-Engineering-SoftUni/main/miscellaneous/tictactoe-1.png" alt="game-image" height="400px"></a></p>
+
+## Live Demo
+[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://app-library-13e36.web.app/apps/tic-tac-toe)
+### The Demo is now part of my app library 
+- Check out the [App Library](https://app-library-13e36.web.app/)
 
 ## Description
 - The game [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) involves 2 players trying to connect 3 adjacent symbols on a 3 by 3 board.
@@ -45,8 +50,7 @@ Let's take player 2 for this example. Here is a list of all possible winning com
 
   
 ## Live Demo
-[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://tictactoe.mirokrastanov.repl.co/)
-  
-  
-## [Source Code](https://github.com/mirokrastanov/TicTacToe/blob/main/app.js)
+[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://app-library-13e36.web.app/apps/tic-tac-toe)
+- [Original Source Code](https://github.com/mirokrastanov/TicTacToe)
+- [React Implementation Code for the App Library](https://github.com/mirokrastanov/app-library/tree/main/client/src/apps/ticTacToe)
   
